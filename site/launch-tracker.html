@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Live dashboard for upcoming global rocket launches" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://fdo.rocketlaunch.live; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <title>Launch Tracker | Round 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-c"></div>
+
+  <header class="topbar">
+    <a class="back-link" href="index.html">Mission Hub</a>
+    <span class="status-dot" id="apiStatus">Loading live data...</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="headline">
+      <p class="kicker">Launch Monitoring Station</p>
+      <h1>Global Upcoming Rocket Launches</h1>
+      <p>
+        Real-time feed from a public launch API. Next mission countdown auto-updates every second.
+      </p>
+    </section>
+
+    <section class="next-launch" aria-live="polite">
+      <div>
+        <p class="label">Next Launch</p>
+        <h2 id="nextMission">Loading mission...</h2>
+        <p id="nextDetails">Waiting for launch feed</p>
+      </div>
+      <div class="countdown-block">
+        <p class="label">T-</p>
+        <p id="countdown" class="countdown">--:--:--:--</p>
+      </div>
+    </section>
+
+    <section class="table-panel">
+      <div class="table-head">
+        <h3>Upcoming Launch Queue</h3>
+        <button id="refreshBtn" class="btn-secondary" type="button">Refresh</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Mission</th>
+              <th>Rocket</th>
+              <th>Launch Site</th>
+              <th>Date (UTC)</th>
+            </tr>
+          </thead>
+          <tbody id="launchTableBody">
+            <tr>
+              <td colspan="4" class="loading-row">Loading upcoming launches...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/launch.js" defer></script>
+</body>
+</html>

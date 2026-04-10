@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI-powered literature synthesis on in-space manufacturing" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <title>Research Brief | In-Space Manufacturing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="orb orb-b"></div>
+
+  <header class="topbar">
+    <a class="back-link" href="index.html">Mission Hub</a>
+    <span class="status-dot">Verified DOI citations included</span>
+  </header>
+
+  <main class="page-shell brief-shell">
+    <article class="brief-paper">
+      <header>
+        <p class="kicker">AI-Powered Literature Synthesis</p>
+        <h1>In-Space Manufacturing: 2023-2026 Evidence Snapshot</h1>
+        <p class="meta">Prepared for Deep Space Science Operations • Date: 2026-04-09</p>
+      </header>
+
+      <section>
+        <h2>Executive Summary</h2>
+        <p>
+          In-space manufacturing is transitioning from demonstration to mission-relevant capability.
+          Recent studies show that additive manufacturing in microgravity can produce metallic,
+          polymeric, and electronics-oriented components with increasing process control. The most
+          robust trend is the shift from conceptual feasibility toward parameterized process physics,
+          including powder spreading behavior, thermal management, and gravitational sensitivity [1][2][3].
+          Parallel work on resource utilization (regolith and bio-derived feedstocks) indicates a credible
+          pathway for logistics reduction in cis-lunar and Mars architectures [4][5].
+        </p>
+      </section>
+
+      <section>
+        <h2>Pipeline Method (Search -> Verify -> Synthesize -> Critique)</h2>
+        <p>
+          A reproducible pipeline was built with API-first tooling. Search queries were executed against
+          scholarly metadata endpoints, then each candidate was DOI-verified before inclusion. Synthesized
+          findings were constrained to verified sources only. A final adversarial review step ("Ghost Defense")
+          flagged over-claims and required explicit evidence mapping from each paragraph to citations.
+        </p>
+      </section>
+
+      <section>
+        <h2>Key Findings</h2>
+        <p>
+          <strong>1) Process physics in reduced gravity is now quantifiable.</strong>
+          Powder-bed and extrusion workflows are no longer treated as black boxes; gravity magnitude,
+          flowability, and deposition stability are being measured directly, enabling process windows that
+          are mission-usable rather than purely experimental [2][3].
+        </p>
+        <p>
+          <strong>2) Materials envelope is widening beyond simple polymers.</strong>
+          Metallic glass fabrication in space and microgravity-compatible microelectronics printing demonstrate
+          that future in-orbit manufacturing stacks can include structural and functional subsystems, not only
+          passive parts [1][6].
+        </p>
+        <p>
+          <strong>3) ISRU-linked manufacturing is becoming strategically central.</strong>
+          Regolith/bio-composite printing and broader space-resource manufacturing frameworks support a clear
+          operational argument: fabricate where mass is consumed to reduce Earth-launch dependency and improve
+          resiliency for long-duration campaigns [4][5].
+        </p>
+      </section>
+
+      <section>
+        <h2>Operational Implications for Mission Design</h2>
+        <p>
+          Programmatically, the near-term value is not full autonomy but hybrid logistics: Earth-manufactured
+          critical hardware plus in-space fabrication for spares, fixtures, shielding elements, and low-risk
+          subsystems. To mature this model, agencies should standardize in-flight qualification protocols,
+          establish digital thread traceability for printed parts, and run side-by-side ground/microgravity
+          benchmarks as a certification backbone.
+        </p>
+      </section>
+
+      <section>
+        <h2>Risk and Research Gaps</h2>
+        <p>
+          Remaining constraints include limited long-duration sample sizes, sparse fatigue and radiation-ageing
+          datasets, and incomplete standards for certifying safety-critical printed components. The next decisive
+          milestone is a closed-loop manufacturing testbed that combines sensing, adaptive control, and post-print
+          non-destructive evaluation directly in orbit.
+        </p>
+      </section>
+
+      <section>
+        <h2>References (Real Papers with DOI)</h2>
+        <ol class="refs">
+          <li>
+            Zhang, B. et al. (2023). <em>Additive manufacturing of metallic glass from powder in space</em>.
+            <span>npj Microgravity</span>. DOI:
+            <a href="https://doi.org/10.1038/s41526-023-00327-7" target="_blank" rel="noopener noreferrer">10.1038/s41526-023-00327-7</a>
+          </li>
+          <li>
+            Zhang, J. et al. (2024). <em>Role of gravity magnitude on flowability and powder spreading in the powder bed fusion additive manufacturing process: Towards additive manufacturing in space</em>.
+            <span>Additive Manufacturing</span>. DOI:
+            <a href="https://doi.org/10.1016/j.addma.2024.104441" target="_blank" rel="noopener noreferrer">10.1016/j.addma.2024.104441</a>
+          </li>
+          <li>
+            Shafiee, A. et al. (2025). <em>An experimental investigation of microgravity conditions on FDM-based in-space polymer additive manufacturing</em>.
+            <span>Acta Astronautica</span>. DOI:
+            <a href="https://doi.org/10.1016/j.actaastro.2024.12.052" target="_blank" rel="noopener noreferrer">10.1016/j.actaastro.2024.12.052</a>
+          </li>
+          <li>
+            Dixit, M. et al. (2021). <em>Additive manufacturing using space resources</em>.
+            <span>In Additive Manufacturing (Elsevier)</span>. DOI:
+            <a href="https://doi.org/10.1016/B978-0-12-818411-0.00018-5" target="_blank" rel="noopener noreferrer">10.1016/B978-0-12-818411-0.00018-5</a>
+          </li>
+          <li>
+            Joffre, T. et al. (2025). <em>3D printing of composites of Martian regolith simulants and cyanobacterial biomass towards sustainable material production on Mars</em>.
+            <span>npj Microgravity</span>. DOI:
+            <a href="https://doi.org/10.1038/s41526-025-00521-9" target="_blank" rel="noopener noreferrer">10.1038/s41526-025-00521-9</a>
+          </li>
+          <li>
+            Liu, Y. et al. (2026). <em>Electrohydrodynamic inkjet printing of resistive random access memory under microgravity: A pathway to in-space manufacturing of microelectronics</em>.
+            <span>Additive Manufacturing</span>. DOI:
+            <a href="https://doi.org/10.1016/j.addma.2026.105114" target="_blank" rel="noopener noreferrer">10.1016/j.addma.2026.105114</a>
+          </li>
+        </ol>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

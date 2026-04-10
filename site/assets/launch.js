@@ -1,5 +1,5 @@
 (() => {
-  const API_URL = "https://fdo.rocketlaunch.live/json/launches/next/20";
+  const API_URL = "https://ll.thespacedevs.com/2.3.0/launches/upcoming/?format=json&limit=20&ordering=net";
   const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
 
   const dom = {
@@ -25,14 +25,14 @@
 
   function parseLaunch(item) {
     const mission = item.name || "Unknown mission";
-    const rocket = item.vehicle?.name || item.provider?.name || "Unknown rocket";
+    const rocket = item.rocket?.configuration?.name || item.launch_service_provider?.name || "Unknown rocket";
     const site = item.pad?.location?.name || item.pad?.name || "Unknown launch site";
 
     let launchDate = null;
-    if (item.sort_date) {
-      launchDate = new Date(Number(item.sort_date) * 1000);
-    } else if (item.win_open) {
-      launchDate = new Date(item.win_open);
+    if (item.net) {
+      launchDate = new Date(item.net);
+    } else if (item.window_start) {
+      launchDate = new Date(item.window_start);
     }
 
     return {
@@ -129,7 +129,7 @@
       }
 
       const payload = await response.json();
-      launches = Array.isArray(payload.result) ? payload.result.map(parseLaunch) : [];
+      launches = Array.isArray(payload.results) ? payload.results.map(parseLaunch) : [];
       launches.sort((a, b) => {
         if (!a.launchDate) return 1;
         if (!b.launchDate) return -1;

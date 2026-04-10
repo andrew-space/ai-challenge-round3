@@ -20,7 +20,7 @@ Learning outcomes from previous rounds are reused with a modular team workflow:
 | `research_pipeline/requirements.txt` | ✅ Dependencies installed (python-dotenv, requests) |
 | `.env.example` | ✅ Template for secrets |
 | `.gitignore` | ✅ Excludes .env, __pycache__, generated output |
-| GitHub Pages deployment | ❌ **NOT DONE — next session priority** |
+| GitHub Pages deployment | ✅ **LIVE** — https://andrew-space.github.io/ai-challenge-round3/ |
 
 ## Session 2 — What To Do Next (Timebox ≈ 20 min)
 
